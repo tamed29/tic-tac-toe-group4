@@ -9,6 +9,7 @@ using namespace std;
 
 // ANSI color codes for colorful terminal output
 namespace Colors {
+
     const string RED = "\033[31m";
     const string BLUE = "\033[34m";
     const string GREEN = "\033[32m";
