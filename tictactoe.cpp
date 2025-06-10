@@ -67,9 +67,37 @@ private:
 
     // ===== Part 2: Game Logic =====
 
-    bool checkWin(char player) const; // Returns true if the player wins
-    bool isBoardFull() const;         // Returns true if board is full (draw)
-    void switchPlayer();              // Changes current player from X to O or vice versa
+
+    // Check if a player has won
+    bool checkWin(char player) const {
+        // Check rows and columns
+        for (int i = 0; i < 3; i++) {
+            if ((board[i][0] == player && board[i][1] == player && board[i][2] == player) ||
+                (board[0][i] == player && board[1][i] == player && board[2][i] == player)) {
+                return true;
+            }
+        }
+
+        // Check diagonals
+        return (board[0][0] == player && board[1][1] == player && board[2][2] == player) ||
+               (board[0][2] == player && board[1][1] == player && board[2][0] == player);
+    }
+
+    // Check if the board is full
+    bool isBoardFull() const {
+        for (const auto& row : board) {
+            for (char cell : row) {
+                if (cell == ' ') return false;
+            }
+        }
+        return true;
+    }
+
+    // Switch players
+    void switchPlayer() {
+        currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
+    }
+
 
     // ===== Part 3: Input Handling =====
 
