@@ -132,6 +132,29 @@ Ideal for:
 
 ---
 
+## 💡 Future Enhancements (Suggestions)
+
+- Add scoring system with persistent leaderboard.
+- Expand board size to 4x4 or 5x5 with dynamic win conditions.
+- Add sound feedback using OS-level features (optional).
+- Graphical interface (using libraries like SFML or SDL).
+- Enable online multiplayer mode.
+
+---
+
+## 💬 Feedback & Contributions
+
+While this project is primarily for academic use, feedback, issues, and contributions are welcome to improve the codebase and usability. You may fork or build upon it for further experimentation.
+
+---
+
+## 📄 License
+
+This project is intended for educational and personal use only. Feel free to modify and share with attribution.
+
+
+---
+
 ## 🐞 Known Issues
 
 - The game currently accepts only numeric input from 1 to 9; string handling may throw errors if improperly entered.
