@@ -92,3 +92,27 @@ Demonstrates OOP principles in C++
 
 . Teaches clean game state management
 
+
+
+
+---
+
+## 🏫 Project Use Case
+
+Ideal for:
+
+* C++ learning and practice
+* DSA/AI course projects
+* Console UI/UX prototyping
+
+---
+
+## 🧑‍🎓 Academic Project Info
+
+- **University**: Arba Minch University (AMU)
+- **Course**: Data Structures and Algorithms
+- **Project**: Tic-Tac-Toe Console Game in C++
+- **Supervised By**: [Add instructor/supervisor name if available]
+
+
+
