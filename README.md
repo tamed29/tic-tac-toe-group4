@@ -91,10 +91,6 @@ Demonstrates OOP principles in C++
 . Uses ANSI escape codes for colored CLI output
 
 . Teaches clean game state management
-
-
-
-
 ---
 
 ## 🏫 Project Use Case
@@ -104,7 +100,6 @@ Ideal for:
 * C++ learning and practice
 * DSA/AI course projects
 * Console UI/UX prototyping
-
 ---
 
 ## 🧑‍🎓 Academic Project Info
@@ -114,5 +109,14 @@ Ideal for:
 - **Project**: Tic-Tac-Toe Console Game in C++
 - **Supervised By**: [Add instructor/supervisor name if available]
 
+### 👥 Group Members
 
+| Name             | GitHub Username   |
+|------------------|-------------------|
+| Tamirat Dereje   | [@tamed29](https://github.com/tamed29)       |
+| Fuad Kedir       | [@furoyal7](https://github.com/furoyal7)     |
+| Pineal Tadesse   | [@Pomi-7](https://github.com/Pomi-7)         |
+| Beniyas Dawit    | [@Benas12-dv](https://github.com/Benas12-dv) |
+| Ahmed Hussen     | [@Ahmeddin](https://github.com/Ahmeddin)     |
+| Yohannis Dereje  | [@Yohannis-10](https://github.com/Yohannis-10) |
 
