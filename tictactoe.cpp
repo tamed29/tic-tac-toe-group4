@@ -308,7 +308,7 @@ public:
                 switchPlayer();
             }
 
-            cout << "Do you want Play again? (y/n): ";
+            cout << "Do you wantto  Play again the game? (y/n): ";
             cin >> playAgain;
         } while (playAgain == 'y' || playAgain == 'Y');
     }
@@ -346,7 +346,7 @@ public:
                 switchPlayer();
             }
 
-            cout << "Do you want Play again? (y/n): ";
+            cout << "Do you want to Play again? (y/n): ";
             cin >> playAgain;
         } while (playAgain == 'y' || playAgain == 'Y');
     }
