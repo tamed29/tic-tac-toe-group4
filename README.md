@@ -28,3 +28,24 @@ user interaction, and artificial intelligence in C++.
   - Uses recursion with pruning to optimize decisions.
   - Considers all game outcomes for optimal strategy.
 
+### 🖥️ Interface and UX
+- **ASCII Board Display**: Easy-to-read grid with position hints (1–9).
+- **Colorized Output**:
+  - `X` – Red
+  - `O` – Blue
+  - Grid and titles – Green
+- **Loading Animation**: Animated loading bar when the game starts.
+- **Game Description**: In-game help menu explaining the rules.
+
+### 🧪 Input Handling
+- Full input validation: prevents invalid or duplicate moves.
+- Error-resistant input loop for smooth experience.
+
+---
+
+## 🏁 How to Play
+
+### 🎲 Controls
+- Players select a grid position by entering numbers 1 through 9.
+- Positions are mapped as:
+
