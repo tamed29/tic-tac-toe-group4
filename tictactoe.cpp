@@ -198,9 +198,25 @@ public:
     // ===== Game Modes =====
     void playSinglePlayer();          // One player vs AI
     void playMultiPlayer();           // Two player mode
+//p 5
+   cout << Colors::RESET;
 
-    // ===== Menu and Main Loop =====
-    void showMainMenu();              // Displays main menu and routes user
+            switch (choice) {
+                case 1:
+                    playSinglePlayer();
+                    break;
+                case 2:
+                    playMultiPlayer();
+                    break;
+                case 3:
+                    showGameDescription();
+                    break;
+                case 4:
+                    cout << "Thanks for playing!\n";
+                    break;
+            }
+        } while (choice != 4);
+    }
 };
 
 // ===== Part 6: Main Function =====
