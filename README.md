@@ -158,6 +158,41 @@ While this project is primarily for academic use, feedback, issues, and contribu
 This project is intended for educational and personal use only. Feel free to modify and share with attribution.
 also give us your feedback!!
 
+Absolutely! Here's the **7th part** of your `README.md` file as **plain text**—a summary section including the key features and purpose of the project:
+
+---
+
+## 🧾 Summary of Tic-Tac-Toe C++ Project
+
+This **Tic-Tac-Toe Console Application** is a comprehensive mini-project developed by students of **Arba Minch University** for the **Data Structures and Algorithms** course. The project blends interactive design, clean coding, and artificial intelligence, providing both educational value and enjoyable gameplay.
+
+---
+
+### 🔑 Key Features Recap
+
+* 🎮 **Multiple Game Modes**: Choose between Single Player (with difficulty levels) and Two Player.
+* 🧠 **AI Difficulty Levels**: From Random AI (Easy) to Minimax-based Smart AI (Hard).
+* 🎨 **User Interface**: ASCII-based grid, color-coded outputs, and loading animations.
+* ✅ **Robust Input Handling**: Prevents invalid, non-numeric, or repeated inputs.
+* 🏆 **Win Detection**: All row, column, and diagonal scenarios checked per move.
+* 🏗️ **Clean OOP Design**: C++ classes used for separation of game logic and display.
+* ⚡ **Performance AI**: Minimax algorithm with alpha-beta pruning for faster decisions.
+
+---
+
+### 📚 Why This Project Stands Out
+
+* Integrates **core DSA concepts** (recursion, backtracking, input validation).
+* Demonstrates **real-world implementation** of AI logic in games.
+* Designed to be **easily extendable** and **user-friendly** for non-technical users.
+
+> This README was collaboratively built in parts by each team member to reflect equal contribution and shared understanding of the project goals.
+
+🎉 **Thank you for reviewing our work!**
+
+---
+
+
 
 
 
