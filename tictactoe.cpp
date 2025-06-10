@@ -100,8 +100,31 @@ private:
 
 
     // ===== Part 3: Input Handling =====
+    // Get player move from input
+    void getPlayerMove() {
+        int move;
+        while (true) {
+            cout << "Player " << currentPlayer << ", enter your move (1-9): ";
+            cin >> move;
 
-    void getPlayerMove();             // Gets and validates player input (1-9)
+            if (cin.fail() || move < 1 || move > 9) {
+                cout << Colors::RED << "Invalid input. Please enter a number between 1 and 9.\n" << Colors::RESET;
+                cin.clear();
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                continue;
+            }
+
+            int row = (move - 1) / 3;
+            int col = (move - 1) % 3;
+
+            if (board[row][col] != ' ') {
+                cout << Colors::RED << "That position is already taken! Try again.\n" << Colors::RESET;
+            } else {
+                board[row][col] = currentPlayer;
+                break;
+            }
+        }
+    }
 
     // ===== Part 4: AI Logic =====
 
