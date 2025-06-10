@@ -60,3 +60,35 @@ user interaction, and artificial intelligence in C++.
 - First player uses **X**, second (or AI) uses **O**.
 - The first to align 3 marks in a row (horizontal, vertical, or diagonal) wins.
 - If all cells are filled without a winner, the game ends in a draw.
+  ---
+
+## 🛠️ How to Compile & Run
+
+1. **Clone or Download the Repository**
+
+2. **Compile**
+   Use a C++ compiler like `g++`:
+   ```bash
+   g++ -std=c++11 -o tictactoe main.cpp
+   RUN 
+3. ./tictactoe
+📷 Screenshots (Optional - Add your own)
+If desired, create a /screenshots folder and showcase:
+
+. Main Menu
+
+. AI vs Player
+
+. Two Player Gameplay
+
+. Victory & Draw Messages
+
+🔍 Educational Highlights
+Demonstrates OOP principles in C++
+
+. Implements classic Minimax with alpha-beta pruning
+
+. Uses ANSI escape codes for colored CLI output
+
+. Teaches clean game state management
+
