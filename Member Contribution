@@ -1,0 +1,61 @@
+<h1 align="center">🤝 Team Contribution Report – Tic-Tac-Toe Game (C++) 🤝</h1>
+
+<p align="center">
+  This document outlines the specific roles and contributions of each team member for the "Advanced Tic-Tac-Toe Console Game" project, developed as part of the Data Structures and Algorithms course at Arba Minch University.
+</p>
+
+---
+
+## 👥 Team Members and Their Roles
+
+Each member contributed equally and significantly by taking responsibility for a designated section of the project and documentation.
+
+### 1. Tamirat Dereje ([GitHub: @tamed29](https://github.com/tamed29))
+**Role**: Game Engine and UI Integration  
+**Key Contributions**:
+- Developed the core game loop (`showMainMenu`, `playSinglePlayer`, `playMultiPlayer`).
+- Implemented the user interface display using ANSI color codes.
+- Managed full game integration and testing.
+
+### 2. Fuad Kedir ([GitHub: @furoyal7](https://github.com/furoyal7))
+**Role**: Game Input Handling and Board Logic  
+**Key Contributions**:
+- Designed the input validation system and mapped positions to board cells.
+- Developed and tested board rendering with dynamic number hints.
+- Handled player move logic and error correction flow.
+
+### 3. Pineal Tadesse ([GitHub: @Pomi-7](https://github.com/Pomi-7))
+**Role**: AI Algorithms  
+**Key Contributions**:
+- Implemented the **Minimax algorithm** with alpha-beta pruning for hard AI.
+- Developed and debugged the easy-mode random AI.
+- Ensured smart decision-making for the computer player.
+
+### 4. Beniyas Dawit ([GitHub: @Benas12-dv](https://github.com/Benas12-dv))
+**Role**: Game State & Rule Engine  
+**Key Contributions**:
+- Implemented the `checkWin`, `isBoardFull`, and `switchPlayer` logic.
+- Tested win/draw conditions and fixed edge-case bugs.
+- Added match replay functionality.
+
+### 5. Ahmed Hussen ([GitHub: @Ahmeddin](https://github.com/Ahmeddin))
+**Role**: Project Documentation and Changelog Manager  
+**Key Contributions**:
+- Drafted and structured the full `README.md` (parts 5 and 6).
+- Created `Known Issues`, `Changelog`, and `Future Enhancements` sections.
+- Managed versioning and improvement logs.
+
+### 6. Yohannis Dereje ([GitHub: @Yohannis-10](https://github.com/Yohannis-10))
+**Role**: Summary, Review, and Quality Control  
+**Key Contributions**:
+- Authored the `README.md` summary section with feature highlights.
+- Reviewed and approved final code structure and documentation.
+- Coordinated merging of all parts into one final deliverable.
+
+---
+
+## 🔗 GitHub Collaboration and Contribution Verification
+
+All members worked from personal GitHub accounts, committing their respective parts under tracked branches or commit messages. To verify each member's work:
+
+
