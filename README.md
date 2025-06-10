@@ -109,7 +109,7 @@ Ideal for:
 - **Project**: Tic-Tac-Toe Console Game in C++
 - **Supervised By**: [Add instructor/supervisor name if available]
 
-### 👥 Group Members
+### 👥 Group Members with their girhub 
 
 | Name             | GitHub Username   |
 |------------------|-------------------|
