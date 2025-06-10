@@ -16,7 +16,7 @@ Each member contributed equally and significantly by taking responsibility for a
 - Developed the core game loop (`showMainMenu`, `playSinglePlayer`, `playMultiPlayer`).
 - Implemented the user interface display using ANSI color codes.
 - Managed full game integration and testing.
-
+- create file that expliain member contributions.
 ### 2. Fuad Kedir ([GitHub: @furoyal7](https://github.com/furoyal7))
 **Role**: Game Input Handling and Board Logic  
 **Key Contributions**:
@@ -56,6 +56,15 @@ Each member contributed equally and significantly by taking responsibility for a
 
 ## 🔗 GitHub Collaboration and Contribution Verification
 
-All members worked from personal GitHub accounts, committing their respective parts under tracked branches or commit messages. To verify each member's work:
+All members worked from personal GitHub accounts, committing their respective parts 
+under tracked branches or commit messages. To verify each member's work:
 
+✅ Summary
+This contribution report ensures transparency and fair academic evaluation. Each part of the project and documentation was assigned, 
+written, committed, and submitted individually by the respective group member.
 
+📌 Project: Advanced Tic-Tac-Toe Console Game
+🎓 University: Arba Minch University (AMU)
+📚 Course: Data Structures and Algorithms
+👥 Group: 6 members
+🗓️ Submission Date: June 2025
