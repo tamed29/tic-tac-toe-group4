@@ -26,9 +26,44 @@ private:
 
     // ===== Part 1: Setup and Board Display =====
 
-    void clearScreen();               // Clears the console screen
-    void initializeBoard();           // Initializes a 3x3 game board
-    void displayBoard() const;        // Draws the board with colors and numbers
+// Clear the terminal screen
+    void clearScreen() {
+        cout << "\033[2J\033[1;1H";  // ANSI escape codes
+    }
+
+    // Initialize the game board
+    void initializeBoard() {
+        board = vector<vector<char>>(3, vector<char>(3, ' '));
+    }
+
+    // Display the current game board
+    void displayBoard() const {
+     //   clearScreen();
+        cout << Colors::GREEN << "\n          TIC-TAC-TOE\n";
+        cout << "          -----------\n";
+
+        for (int i = 0; i < 3; i++) {
+            cout << "          ";
+            for (int j = 0; j < 3; j++) {
+                if (board[i][j] == 'X') {
+                    cout << Colors::RED << " " << board[i][j] << " ";
+                } else if (board[i][j] == 'O') {
+                    cout << Colors::BLUE << " " << board[i][j] << " ";
+                } else {
+                    cout << " " << (i * 3 + j + 1) << " ";  // Show position numbers
+                }
+
+                if (j < 2) cout << Colors::GREEN << "|";
+            }
+            cout << Colors::RESET << endl;
+
+            if (i < 2) {
+                cout << Colors::GREEN << "          ---+---+---" << Colors::RESET << endl;
+            }
+        }
+        cout << endl;
+    }
+
 
     // ===== Part 2: Game Logic =====
 
