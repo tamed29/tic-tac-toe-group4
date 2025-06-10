@@ -1,5 +1,5 @@
 <h1 align="center">🎮 Advanced Tic-Tac-Toe Game (C++ Console Application) 🎮</h1>
-
+<h2 align="center"> done by G2 software sec-A group-4 students </h2>
 <p align="center">
   A feature-rich, colorized C++ console implementation of the classic Tic-Tac-Toe game supporting Single Player (Easy/Hard AI) and Two Player modes.
 </p>
@@ -151,9 +151,8 @@ While this project is primarily for academic use, feedback, issues, and contribu
 ## 📄 License
 
 This project is intended for educational and personal use only. Feel free to modify and share with attribution.
+also give us your feedback!!
 
-
----
 
 ## 🐞 Known Issues
 
