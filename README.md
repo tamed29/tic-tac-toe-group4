@@ -49,3 +49,14 @@ user interaction, and artificial intelligence in C++.
 - Players select a grid position by entering numbers 1 through 9.
 - Positions are mapped as:
 
+1 | 2 | 3
+---+---+---
+4 | 5 | 6
+---+---+---
+7 | 8 | 9
+
+
+### 📋 Rules
+- First player uses **X**, second (or AI) uses **O**.
+- The first to align 3 marks in a row (horizontal, vertical, or diagonal) wins.
+- If all cells are filled without a winner, the game ends in a draw.
