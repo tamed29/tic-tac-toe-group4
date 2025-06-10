@@ -185,20 +185,136 @@ private:
             return bestScore;
         }
     }
+ // Hard AI using minimax
+    void makeSmartAIMove() {
+        int bestScore = -1000;
+        pair<int, int> bestMove = {-1, -1};
 
-    // ===== Part 5: UI and Flow =====
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (board[i][j] == ' ') {
+                    board[i][j] = 'O';
+                    int score = minimax(0, false, -1000, 1000);
+                    board[i][j] = ' ';
 
-    void showLoadingScreen();         // Shows a fake loading bar
-    void showGameDescription();       // Displays how to play
+                    if (score > bestScore) {
+                        bestScore = score;
+                        bestMove = {i, j};
+                    }
+                }
+            }
+        }
+
+        if (bestMove.first != -1) {
+            board[bestMove.first][bestMove.second] = 'O';
+        }
+    }
+
+    // Show loading animation
+    void showLoadingScreen() {
+        clearScreen();
+        cout << Colors::GREEN << "Loading Tic-Tac-Toe...\n" << Colors::RESET;
+
+        for (int i = 0; i <= 10; i++) {
+            cout << "[";
+            for (int j = 0; j < 10; j++) {
+                if (j < i) cout << "=";
+                else cout << " ";
+            }
+            cout << "] " << i * 10 << "%\r";
+            cout.flush();
+            this_thread::sleep_for(chrono::milliseconds(200));
+        }
+
+        cout << Colors::GREEN << "\nReady to play!\n" << Colors::RESET;
+        this_thread::sleep_for(chrono::seconds(1));
+    }
+
+    // Display game description
+    void showGameDescription() {
+        clearScreen();
+        cout << Colors::GREEN << "       TIC-TAC-TOE GAME DESCRIPTION\n";
+        cout << "       -----------------------------\n\n" << Colors::RESET;
+        cout << "Tic-Tac-Toe is a classic two-player game played on a 3x3 grid.\n";
+        cout << "Players take turns marking a space in the grid, one using 'X' and the other using 'O'.\n";
+        cout << "The goal is to be the first to get three of your marks in a row (horizontally, vertically, or diagonally).\n\n";
+        cout << "How to Play:\n";
+        cout << "1. Choose between single-player (vs AI) or two-player mode\n";
+        cout << "2. When prompted, enter a number (1-9) corresponding to the position on the board\n";
+        cout << "3. Try to get three in a row while blocking your opponent\n\n";
+        cout << "Press Enter to return to the main menu...";
+        cin.ignore();
+        cin.get();
+    }
 
 public:
-    // ===== Constructor =====
-    TicTacToe();                      // Initializes variables, seeds RNG
+    // Constructor
+    TicTacToe() : board(3, vector<char>(3, ' ')), currentPlayer('X'), vsAI(false), hardMode(false) {
+        srand(time(0));
+    }
 
-    // ===== Game Modes =====
-    void playSinglePlayer();          // One player vs AI
-    void playMultiPlayer();           // Two player mode
-//p 5
+    // Main game loop for single player mode
+    void playSinglePlayer() {
+        clearScreen();
+        cout << Colors::GREEN << "Choose difficulty:\n";
+        cout << "1. Easy\n";
+        cout << "2. Hard\n";
+        cout << "Enter your choice: " << Colors::YELLOW;
+
+        int choice;
+        while (!(cin >> choice) || (choice != 1 && choice != 2)) {
+            cout << Colors::RED << "Invalid choice. Please enter 1 or 2: " << Colors::YELLOW;
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        }
+        cout << Colors::RESET;
+
+        hardMode = (choice == 2);
+        vsAI = true;
+
+        char playAgain;
+        do {
+            initializeBoard();
+            currentPlayer = 'X';
+
+            while (true) {
+                displayBoard();
+
+                if (currentPlayer == 'X') {
+                    getPlayerMove();
+                } else {
+                    cout << "AI is thinking...\n";
+                    this_thread::sleep_for(chrono::seconds(1));
+
+                    if (hardMode) {
+                        makeSmartAIMove();
+                    } else {
+                        makeRandomAIMove();
+                    }
+                }
+
+                if (checkWin(currentPlayer)) {
+                    displayBoard();
+                    cout << (currentPlayer == 'X' ? "You win!" : "AI wins!") << endl;
+                    break;
+                }
+
+                if (isBoardFull()) {
+                    displayBoard();
+                    cout << "It's a draw!\n";
+                    break;
+                }
+
+                switchPlayer();
+            }
+
+            cout << "Do you want Play again? (y/n): ";
+            cin >> playAgain;
+        } while (playAgain == 'y' || playAgain == 'Y');
+    }
+
+   
+
    cout << Colors::RESET;
 
             switch (choice) {
