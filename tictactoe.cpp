@@ -312,7 +312,45 @@ public:
             cin >> playAgain;
         } while (playAgain == 'y' || playAgain == 'Y');
     }
+ // Main game loop for multiplayer mode
+    void playMultiPlayer() {
+        string player1, player2;
+        clearScreen();
 
+        cout << "Enter Player 1 name (X): ";
+        cin >> player1;
+        cout << "Enter Player 2 name (O): ";
+        cin >> player2;
+
+        char playAgain;
+        do {
+            initializeBoard();
+            currentPlayer = 'X';
+
+            while (true) {
+                displayBoard();
+                getPlayerMove();
+
+                if (checkWin(currentPlayer)) {
+                    displayBoard();
+                    cout << (currentPlayer == 'X' ? player1 : player2) << " wins!\n";
+                    break;
+                }
+
+                if (isBoardFull()) {
+                    displayBoard();
+                    cout << "It's a draw!\n";
+                    break;
+                }
+
+                switchPlayer();
+            }
+
+            cout << "Do you want Play again? (y/n): ";
+            cin >> playAgain;
+        } while (playAgain == 'y' || playAgain == 'Y');
+    }
+    
    
 
    cout << Colors::RESET;
