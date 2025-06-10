@@ -8,7 +8,10 @@
 
 ## 📌 Overview
 
-This project is a terminal-based Tic-Tac-Toe game designed with interactive visuals, AI opponent functionality (including Minimax algorithm), and a friendly user interface. It serves as both an enjoyable game and a practical example of implementing game logic, user interaction, and artificial intelligence in C++.
+This project is a terminal-based Tic-Tac-Toe game designed with interactive visuals, 
+AI opponent functionality (including Minimax algorithm), and a friendly user interface. 
+It serves as both an enjoyable game and a practical example of implementing game logic, 
+user interaction, and artificial intelligence in C++.
 
 ---
 
