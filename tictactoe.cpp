@@ -168,7 +168,23 @@ private:
                 }
             }
             return bestScore;
+        }  else {
+            int bestScore = 1000;
+            for (int i = 0; i < 3; i++) {
+                for (int j = 0; j < 3; j++) {
+                    if (board[i][j] == ' ') {
+                        board[i][j] = 'X';
+                        int score = minimax(depth + 1, true, alpha, beta);
+                        board[i][j] = ' ';
+                        bestScore = min(score, bestScore);
+                        beta = min(beta, bestScore);
+                        if (beta <= alpha) break;
+                    }
+                }
+            }
+            return bestScore;
         }
+    }
 
     // ===== Part 5: UI and Flow =====
 
