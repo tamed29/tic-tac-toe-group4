@@ -1,4 +1,4 @@
-<h1 align="center">🤝 Team Contribution Report – Tic-Tac-Toe Game (C++) 🤝</h1>
+<h1 align="center">🤝 Team Contribution Report – Tic-Tac-Toe Game (C++)  done by software G2 sec -A 🤝</h1>
 
 <p align="center">
   This document outlines the specific roles and contributions of each team member for the "Advanced Tic-Tac-Toe Console Game" project, developed as part of the Data Structures and Algorithms course at Arba Minch University.
@@ -58,6 +58,8 @@ Each member contributed equally and significantly by taking responsibility for a
 
 All members worked from personal GitHub accounts, committing their respective parts 
 under tracked branches or commit messages. To verify each member's work:
+
+git log --author="Member Name" --oneline
 
 ✅ Summary
 This contribution report ensures transparency and fair academic evaluation. Each part of the project and documentation was assigned, 
