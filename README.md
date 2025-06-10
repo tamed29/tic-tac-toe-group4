@@ -140,7 +140,12 @@ Ideal for:
 - Graphical interface (using libraries like SFML or SDL).
 - Enable online multiplayer mode.
 
----
+## 🐞 Known Issues
+
+- The game currently accepts only numeric input from 1 to 9; string handling may throw errors if improperly entered.
+- There is no save/load functionality for game sessions.
+- AI does not learn from past games — it restarts with a clean state each time.
+
 
 ## 💬 Feedback & Contributions
 
@@ -154,8 +159,5 @@ This project is intended for educational and personal use only. Feel free to mod
 also give us your feedback!!
 
 
-## 🐞 Known Issues
 
-- The game currently accepts only numeric input from 1 to 9; string handling may throw errors if improperly entered.
-- There is no save/load functionality for game sessions.
-- AI does not learn from past games — it restarts with a clean state each time.
+
