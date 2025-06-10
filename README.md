@@ -14,5 +14,17 @@ It serves as both an enjoyable game and a practical example of implementing game
 user interaction, and artificial intelligence in C++.
 
 ---
+## 🎯 Features
 
+### 🎮 Game Modes
+- **Single Player vs AI**
+  - **Easy Mode**: Random AI moves.
+  - **Hard Mode**: AI powered by the Minimax algorithm with alpha-beta pruning.
+- **Two Player Mode**: Classic mode for local multiplayer games.
+
+### 🧠 AI Implementation
+- **Random AI**: Selects any available cell randomly.
+- **Smart AI (Minimax)**:
+  - Uses recursion with pruning to optimize decisions.
+  - Considers all game outcomes for optimal strategy.
 
