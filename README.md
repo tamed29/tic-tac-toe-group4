@@ -120,3 +120,20 @@ Ideal for:
 | Ahmed Hussen     | [@Ahmeddin](https://github.com/Ahmeddin)     |
 | Yohannis Dereje  | [@Yohannis-10](https://github.com/Yohannis-10) |
 
+---
+
+## 🔄 Changelog
+
+| Version | Date       | Description                                 |
+|---------|------------|---------------------------------------------|
+| 1.0     | 2025-06-10 | Initial release with single/multiplayer mode and AI |
+| 1.1     | TBD        | UI improvements and bug fixes               |
+| 1.2     | TBD        | Efficiency stats for AI moves (planned)     |
+
+---
+
+## 🐞 Known Issues
+
+- The game currently accepts only numeric input from 1 to 9; string handling may throw errors if improperly entered.
+- There is no save/load functionality for game sessions.
+- AI does not learn from past games — it restarts with a clean state each time.
