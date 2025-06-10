@@ -1,15 +1,15 @@
 #include <iostream>
 #include <vector>
 #include <limits>
+#include <algorithm>
 #include <thread>
 #include <chrono>
-#include <cstdlib>
-#include <ctime>
+#include <stdexcept>
+
 using namespace std;
 
-// ANSI color codes for colorful terminal output
+// ANSI color codes for terminal output
 namespace Colors {
-
     const string RED = "\033[31m";
     const string BLUE = "\033[34m";
     const string GREEN = "\033[32m";
@@ -23,10 +23,8 @@ private:
     char currentPlayer;
     bool vsAI;
     bool hardMode;
-
-    // ===== Part 1: Setup and Board Display =====
-
-// Clear the terminal screen
+      // ===== Part 1: Setup and Board Display =====
+    // Clear the terminal screen
     void clearScreen() {
         cout << "\033[2J\033[1;1H";  // ANSI escape codes
     }
@@ -38,7 +36,7 @@ private:
 
     // Display the current game board
     void displayBoard() const {
-     //   clearScreen();
+        //clearScreen();
         cout << Colors::GREEN << "\n          TIC-TAC-TOE\n";
         cout << "          -----------\n";
 
@@ -63,11 +61,7 @@ private:
         }
         cout << endl;
     }
-
-
-    // ===== Part 2: Game Logic =====
-
-
+          // ===== Part 2: Game Logic =====
     // Check if a player has won
     bool checkWin(char player) const {
         // Check rows and columns
@@ -78,7 +72,7 @@ private:
             }
         }
 
-        //Check diagonals
+        // Check diagonals
         return (board[0][0] == player && board[1][1] == player && board[2][2] == player) ||
                (board[0][2] == player && board[1][1] == player && board[2][0] == player);
     }
@@ -98,10 +92,8 @@ private:
         currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
     }
 
-
     // ===== Part 3: Input Handling =====
     // Get player move from input
-
     void getPlayerMove() {
         int move;
         while (true) {
@@ -127,9 +119,7 @@ private:
         }
     }
 
-    // ===== Part 4: AI Logic =====
-
-   // Simple AI that makes random moves
+     // ===== Part 4: AI Logic =====
     void makeRandomAIMove() {
         vector<pair<int, int>> availableMoves;
         for (int i = 0; i < 3; i++) {
@@ -168,7 +158,7 @@ private:
                 }
             }
             return bestScore;
-        }  else {
+        } else {
             int bestScore = 1000;
             for (int i = 0; i < 3; i++) {
                 for (int j = 0; j < 3; j++) {
@@ -185,7 +175,8 @@ private:
             return bestScore;
         }
     }
- // Hard AI using minimax
+
+    // Hard AI using minimax
     void makeSmartAIMove() {
         int bestScore = -1000;
         pair<int, int> bestMove = {-1, -1};
@@ -210,7 +201,7 @@ private:
         }
     }
 
-    // Show loading animation
+    // part 5  Show loading animation
     void showLoadingScreen() {
         clearScreen();
         cout << Colors::GREEN << "Loading Tic-Tac-Toe...\n" << Colors::RESET;
@@ -308,11 +299,12 @@ public:
                 switchPlayer();
             }
 
-            cout << "Do you wantto  Play again the game? (y/n): ";
+            cout << "Do you want to play the game again? (y/n): ";
             cin >> playAgain;
         } while (playAgain == 'y' || playAgain == 'Y');
     }
- // Main game loop for multiplayer mode
+
+    //part 6  Main game loop for multiplayer mode and main function
     void playMultiPlayer() {
         string player1, player2;
         clearScreen();
@@ -346,14 +338,32 @@ public:
                 switchPlayer();
             }
 
-            cout << "Do you want to Play again? (y/n): ";
+            cout << "Do you want to play the game again? (y/n): ";
             cin >> playAgain;
         } while (playAgain == 'y' || playAgain == 'Y');
     }
-    
-   
 
-   cout << Colors::RESET;
+    // Main menu
+    void showMainMenu() {
+        showLoadingScreen();
+
+        int choice;
+        do {
+            clearScreen();
+            cout << Colors::GREEN << "          TIC-TAC-TOE MAIN MENU\n";
+            cout << "          -----------------------\n\n" << Colors::RESET;
+            cout << "1. Single Player (vs AI)\n";
+            cout << "2. Two Players\n";
+            cout << "3. Game Description\n";
+            cout << Colors::RED << "4. Exit\n\n" << Colors::RESET;
+            cout << "Enter your choice (1-4): " << Colors::YELLOW;
+
+            while (!(cin >> choice) || choice < 1 || choice > 4) {
+                cout << Colors::RED << "Invalid choice. Please enter 1-4: " << Colors::YELLOW;
+                cin.clear();
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            }
+            cout << Colors::RESET;
 
             switch (choice) {
                 case 1:
@@ -373,10 +383,8 @@ public:
     }
 };
 
-// ===== Part 6: Main Function =====
-
 int main() {
     TicTacToe game;
-    game.showMainMenu();              // Starts the game
+    game.showMainMenu();
     return 0;
 }
