@@ -129,9 +129,46 @@ private:
 
     // ===== Part 4: AI Logic =====
 
-    void makeRandomAIMove();          // Random move for easy mode AI
-    int minimax(int depth, bool isMaximizing, int alpha, int beta); // Minimax for hard AI
-    void makeSmartAIMove();           // Smart AI move using minimax
+   // Simple AI that makes random moves
+    void makeRandomAIMove() {
+        vector<pair<int, int>> availableMoves;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (board[i][j] == ' ') {
+                    availableMoves.emplace_back(i, j);
+                }
+            }
+        }
+
+        if (!availableMoves.empty()) {
+            int randomIndex = rand() % availableMoves.size();
+            auto move = availableMoves[randomIndex];
+            board[move.first][move.second] = currentPlayer;
+        }
+    }
+
+    // Minimax algorithm with alpha-beta pruning for hard AI
+    int minimax(int depth, bool isMaximizing, int alpha, int beta) {
+        if (checkWin('O')) return 10 - depth;
+        if (checkWin('X')) return depth - 10;
+        if (isBoardFull()) return 0;
+
+        if (isMaximizing) {
+            int bestScore = -1000;
+            for (int i = 0; i < 3; i++) {
+                for (int j = 0; j < 3; j++) {
+                    if (board[i][j] == ' ') {
+                        board[i][j] = 'O';
+                        int score = minimax(depth + 1, false, alpha, beta);
+                        board[i][j] = ' ';
+                        bestScore = max(score, bestScore);
+                        alpha = max(alpha, bestScore);
+                        if (beta <= alpha) break;
+                    }
+                }
+            }
+            return bestScore;
+        }
 
     // ===== Part 5: UI and Flow =====
 
